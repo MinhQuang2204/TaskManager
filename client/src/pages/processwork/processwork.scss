@@ -1,0 +1,18 @@
+.processwork {
+    width: 100%;
+    display: flex;
+
+    &__left {
+        width: 15%;
+    }
+
+    &__right {
+        width: 85%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}

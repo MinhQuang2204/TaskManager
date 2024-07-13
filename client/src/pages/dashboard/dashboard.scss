@@ -1,0 +1,126 @@
+@import '../../styles/abstract/mixins';
+
+.dashboard {
+    width: 100%;
+    display: flex;
+
+    &__left {
+        width: 15%;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+
+    &__right {
+        width: 85%;
+        //margin-top: 2rem;
+        margin-left: 2rem;
+        /* Khoảng cách giữa __left và __right */
+        margin-right: 2rem; // Khoảng cách giữa __right và bên phải
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .taskcount {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        //justify-content: space-evenly;
+        justify-content: center;
+        /* Căn giữa các thẻ card */
+        margin-bottom: 2rem;
+        /* Khoảng cách giữa taskcount và charts */
+        width: 100%;
+
+        .card {
+            flex: 1 1 calc(25% - 1rem);
+            /* Adjust this value based on desired spacing */
+            box-sizing: border-box;
+            min-width: 200px;
+            /* Ensure a minimum width for smaller screens */
+            background-color: #fff;
+            /* White background for card */
+            border-radius: 10px;
+            /* Rounded corners */
+            padding: 1rem;
+            /* Padding inside the card */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+            /* Box shadow */
+            text-align: center;
+            /* Center text */
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #333;
+            /* Dark text color */
+        }
+
+        .card-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+            /* Blue text color */
+        }
+    }
+
+    &__rightContent {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        /* Màu chữ đậm */
+    }
+
+    .charts {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        /* Đảm bảo biểu đồ chiếm toàn bộ chiều rộng */
+        flex-wrap: wrap;
+        /* Cho phép xuống dòng khi màn hình nhỏ */
+        gap: 1rem;
+        /* Khoảng cách giữa các biểu đồ */
+
+        .chart {
+            flex: 1 1 45%;
+            /* Đảm bảo mỗi chart chiếm 45% chiều rộng và có thể co dãn */
+            //max-width: 45%; /* Giới hạn chiều rộng tối đa */
+            //width: 45%;
+            height: 400px;
+            background-color: #f9f9f9;
+            /* Nền màu xám nhạt cho biểu đồ */
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+            /* Thêm bóng đổ */
+
+            margin-bottom: 1rem;
+            /* Khoảng cách dưới giữa các biểu đồ khi xuống dòng */
+
+            display: flex;
+            /* Sử dụng flex để đảm bảo ResponsiveContainer chiếm toàn bộ khung */
+            align-items: center;
+            /* Căn giữa theo chiều dọc */
+            justify-content: center;
+            /* Căn giữa theo chiều ngang */
+        }
+    }
+
+    .button {
+        background-color: red;
+        color: white;
+        width: 20rem;
+    }
+}

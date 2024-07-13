@@ -1,0 +1,91 @@
+.menu {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 1rem auto;
+    width: 98%;
+    background-color: #fff;
+    /* Màu nền */
+
+
+    .item {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid #ddd;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    .button {
+        .btn {
+            background-color: #ffff;
+            /* Màu nền */
+            border: 1px solid black;
+            /* Bỏ đường viền mặc định */
+            color: black;
+            /* Màu chữ */
+            padding: 5px 10px;
+            /* Khoảng đệm */
+            text-align: center;
+            /* Căn giữa nội dung */
+            text-decoration: none;
+            /* Bỏ gạch chân */
+            display: inline-block;
+            /* Hiển thị dưới dạng khối nội tuyến */
+            font-size: 16px;
+            /* Cỡ chữ */
+            margin: 5px;
+            /* Khoảng cách giữa các nút */
+            cursor: pointer;
+            /* Con trỏ khi hover */
+            border-radius: 5px;
+            /* Bo góc */
+            transition: background-color 0.3s, transform 0.2s;
+            /* Hiệu ứng chuyển đổi */
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            /* Màu nền khi hover */
+            transform: scale(1.05);
+            /* Phóng to nhẹ */
+        }
+
+        .btn:active {
+            background-color: #004085;
+            /* Màu nền khi nhấn */
+            transform: scale(0.95);
+            /* Thu nhỏ nhẹ */
+        }
+
+        .btn:disabled {
+            background-color: #6c757d;
+            /* Màu nền khi bị vô hiệu hóa */
+            cursor: not-allowed;
+            /* Con trỏ khi bị vô hiệu hóa */
+            opacity: 0.65;
+            /* Độ trong suốt */
+        }
+
+        .btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5);
+        }
+
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+.completed {
+    background-color: rgb(5, 179, 5);
+    color: white;
+}

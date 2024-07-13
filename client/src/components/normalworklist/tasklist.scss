@@ -1,0 +1,65 @@
+.list-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 1rem auto;
+    width: 98%;
+    background-color: #f5f5f5;
+    border: 1.5px solid black;
+    color: white;
+
+    li {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        border-right: 1px solid #ddd;
+        /* Đường viền giữa các cột */
+
+        &:last-child {
+            border-right: none;
+            /* Bỏ đường viền cho cột cuối cùng */
+        }
+    }
+
+    h5 {
+        font-size: 14px;
+        color: black;
+    }
+}
+
+/* Tab Header Styles */
+.tab-header {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-header button {
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.tab-header button.active {
+    background-color: #ccc;
+}
+
+/* Tab Content Styles */
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab-content .tab-pane {
+    display: none;
+}
+
+.tab-content .tab-pane.active {
+    display: block;
+}

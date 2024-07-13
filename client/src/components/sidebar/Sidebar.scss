@@ -1,0 +1,251 @@
+.sidebar {
+    background-color: #333;
+    color: white;
+    height: 100vh !important;
+    padding: 1rem;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+
+    ul {
+        list-style-type: none; // Loại bỏ dấu chấm trước mỗi item
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 35px;
+
+            &:last-child {
+                margin-bottom: 0; // Loại bỏ khoảng cách dưới của mục cuối cùng
+            }
+
+            a {
+                text-decoration: none; // Loại bỏ gạch chân ở link
+                color: white; // Màu chữ cho các link
+
+                &:hover {
+                    color: #007bff; // Màu chữ khi hover
+                }
+            }
+
+            .title {
+                font-size: 15px;
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0px auto !important;
+
+            }
+
+            .user-info {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 40px; // Độ rộng của ảnh người dùng
+                    height: 40px; // Chiều cao của ảnh người dùng
+                    border-radius: 50%; // Bo tròn ảnh
+                    margin-right: 10px; // Khoảng cách với tên người dùng
+                }
+
+                .currentusername {
+                    margin: 0; // Loại bỏ margin mặc định
+                    font-size: 13px; // Kích thước chữ cho tên người dùng
+                    // font-weight: normal; // Đậm cho tên người dùng
+                }
+            }
+        }
+    }
+
+    .sun {
+        width: 200px;
+        /* Giảm kích thước */
+        height: 200px;
+        /* Giảm kích thước */
+        padding: 0px;
+        /* Giảm padding */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .cloud {
+            width: 200px;
+            /* Giảm kích thước */
+        }
+
+        .front {
+            padding-top: 30px;
+            /* Giảm padding */
+            margin-left: 15px;
+            /* Giảm margin */
+            display: inline;
+            position: absolute;
+            z-index: 11;
+            animation: clouds 8s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .back {
+            margin-top: -20px;
+            /* Giảm margin */
+            margin-left: 90px;
+            /* Giảm margin */
+            z-index: 12;
+            animation: clouds 12s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .right-front {
+            width: 30px;
+            /* Giảm kích thước */
+            height: 30px;
+            /* Giảm kích thước */
+            border-radius: 50% 50% 50% 0%;
+            background-color: #4c9beb;
+            display: inline-block;
+            margin-left: -15px;
+            /* Giảm margin */
+            z-index: 5;
+        }
+
+        .left-front {
+            width: 45px;
+            /* Giảm kích thước */
+            height: 45px;
+            /* Giảm kích thước */
+            border-radius: 50% 50% 0% 50%;
+            background-color: #4c9beb;
+            display: inline-block;
+            z-index: 5;
+        }
+
+        .right-back {
+            width: 35px;
+            /* Giảm kích thước */
+            height: 35px;
+            /* Giảm kích thước */
+            border-radius: 50% 50% 50% 0%;
+            background-color: #4c9beb;
+            display: inline-block;
+            margin-left: -15px;
+            /* Giảm margin */
+            z-index: 5;
+        }
+
+        .left-back {
+            width: 20px;
+            /* Giảm kích thước */
+            height: 20px;
+            /* Giảm kích thước */
+            border-radius: 50% 50% 0% 50%;
+            background-color: #4c9beb;
+            display: inline-block;
+            z-index: 5;
+        }
+
+        .sun {
+            width: 80px;
+            /* Giảm kích thước */
+            height: 80px;
+            /* Giảm kích thước */
+            margin-left: -50px;
+            background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
+            background: linear-gradient(to right, #fcbb04, #fffc00);
+            border-radius: 40px;
+            /* Giảm bán kính */
+            display: inline;
+            position: absolute;
+        }
+
+        .sunshine {
+            animation: sunshines 2s infinite;
+        }
+
+        @keyframes sunshines {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+
+        @keyframes clouds {
+            0% {
+                transform: translateX(10px);
+                /* Giảm dịch chuyển */
+            }
+
+            50% {
+                transform: translateX(0px);
+            }
+
+            100% {
+                transform: translateX(10px);
+                /* Giảm dịch chuyển */
+            }
+        }
+    }
+
+    .backtotop {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(20, 20, 20);
+        border: none;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+        cursor: pointer;
+        transition-duration: 0.3s;
+        overflow: hidden;
+        position: relative;
+
+        .svgIcon {
+            width: 12px;
+            transition-duration: 0.3s;
+        }
+
+        .svgIcon path {
+            fill: white;
+        }
+
+        .backtotop:hover {
+            width: 140px;
+            border-radius: 50px;
+            transition-duration: 0.3s;
+            background-color: rgb(181, 160, 255);
+            align-items: center;
+        }
+
+        .backtotop:hover .svgIcon {
+            /* width: 20px; */
+            transition-duration: 0.3s;
+            transform: translateY(-200%);
+        }
+
+        .backtotop::before {
+            position: absolute;
+            bottom: -20px;
+            content: "Back to Top";
+            color: white;
+            /* transition-duration: .3s; */
+            font-size: 0px;
+        }
+
+        .backtotop:hover::before {
+            font-size: 13px;
+            opacity: 1;
+            bottom: unset;
+            /* transform: translateY(-30px); */
+            transition-duration: 0.3s;
+        }
+    }
+}

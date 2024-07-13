@@ -1,0 +1,128 @@
+.normalwork {
+    width: 100%;
+    display: flex;
+
+    &__left {
+        width: 15%;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+
+    &__right {
+        width: 85%;
+    }
+
+    &__addtask {
+        display: flex;
+        align-items: center;
+        margin: 20px;
+
+        h5 {
+            font-weight: 500;
+            color: #1a2f36;
+            font-family: Roboto, Arial, sans-serif;
+            margin-left: 30px;
+
+        }
+
+        .buttonaddtask {
+            .custom-button {
+                cursor: pointer;
+                outline: none;
+                transition: transform 0.3s ease;
+                background-color: white;
+                border: none;
+
+            }
+
+            .custom-button:hover {
+                transform: rotate(90deg);
+
+            }
+
+            .custom-svg {
+                stroke: #71717a;
+                fill: none;
+                transition: fill 0.3s ease, stroke 0.3s ease;
+            }
+
+            .custom-button:hover .custom-svg {
+                fill: #27272a;
+                stroke: white;
+            }
+
+            .custom-button:active .custom-svg {
+                stroke: #a1a1aa;
+                fill: #52525b;
+                transition-duration: 0s;
+            }
+        }
+
+        .search-container {
+            width: 220px;
+            position: absolute;
+            top: 90px;
+            right: 60px;
+
+            .icon {
+                cursor: pointer;
+                position: absolute;
+                right: 10px;
+                top: calc(50% + 5px);
+                transform: translateY(calc(-50% - 5px));
+            }
+
+            .input {
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                transition: .2s linear;
+                border: 2.5px solid black;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            .input:focus {
+                outline: none;
+                border: 0.5px solid black;
+                box-shadow: -5px -5px 0px black;
+            }
+
+            .input-container:hover>.icon {
+                animation: anim 1s linear infinite;
+            }
+
+            @keyframes anim {
+
+                0%,
+                100% {
+                    transform: translateY(calc(-50% - 5px)) scale(1);
+                }
+
+                50% {
+                    transform: translateY(calc(-50% - 5px)) scale(1.1);
+                }
+            }
+        }
+    }
+
+    .divider {
+        border: 0;
+        height: 1px;
+        background: black;
+        margin-top: 20px;
+        /* Tùy chọn để thêm khoảng cách trên và dưới */
+        margin-bottom: 30px;
+        /* Tùy chọn để thêm khoảng cách trên và dưới */
+    }
+}
+
+// /* Thêm khoảng cách giữa các phần */
+// // .normalwork__addtask {
+//     margin-bottom: 20px;
+//     margin-top: 10px;
+//     margin-left: 20px;
+//     /* Điều chỉnh giá trị này theo ý muốn để tạo khoảng cách mong muốn */
+// }
